@@ -19,10 +19,10 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="Auditor-IA API")
 # Lista de "origens" (endereços) que têm permissão para aceder à tua API
 origins = [
+    "https://auditor-ia-wheat.vercel.app",
     "http://localhost:5173",
-    "http://localhost:3000",
-    "http://localhost",
-    "https://auditor-ia-brintell.vercel.app",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",    
 ]
 
 app.add_middleware(
@@ -33,7 +33,11 @@ app.add_middleware(
     allow_headers=["*"],  # Permite todos os cabeçalhos
 )
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
 
+    
 @app.get("/")
 def ler_raiz():
     return {"message": "Olá, Auditor-IA! O servidor está no ar."}
