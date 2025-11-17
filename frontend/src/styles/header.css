@@ -1,0 +1,62 @@
+.site-header {
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
+.logo-text {
+  font-size: 32px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ====== Botões do menu ====== */
+.topnav {
+  display: flex;
+  gap: 16px;
+}
+
+.topnav button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.topnav button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.topnav button:active {
+  background-color: rgba(255, 255, 255, 0.25);
+}

@@ -1,0 +1,103 @@
+.report-view {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.report-view h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.report-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 25px;
+}
+
+/* ====== CARD DO RELATÓRIO ====== */
+.report-card {
+  background: linear-gradient(145deg, #ffffff, #f1f5ff);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid var(--primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.report-card h3 {
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.report-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.report-card li {
+  margin-bottom: 6px;
+}
+
+/* ====== CONCLUSÃO ====== */
+.report-card.conclusion {
+  background: linear-gradient(135deg, #1f3b73, #2c57b4);
+  color: white;
+  border-left: none;
+  text-align: justify;
+}
+
+/* ====== BOTÕES ====== */
+.controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn.pdf {
+  background: linear-gradient(135deg, #2c57b4, #1f3b73);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 3px 12px rgba(31, 59, 115, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn.pdf:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(31, 59, 115, 0.4);
+}
+
+.btn.secondary {
+  background: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  transition: 0.25s ease;
+}
+
+.btn.secondary:hover {
+  background: var(--hover);
+  transform: translateY(-1px);
+}
